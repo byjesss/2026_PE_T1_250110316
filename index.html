@@ -910,8 +910,6 @@ section:nth-child(5) { animation-delay: 0.45s; }
             <span></span>
         </button>
         <ul class="navbar-links" id="navbar-links">
-            <li><a href="#teoria">Variables</a></li>
-            <li><a href="#metodologia">Distribuciones</a></li>
             <li><a href="#ej-cualitativa">Cualitativa</a></li>
             <li><a href="#ej-discreta"> Cuantitativa Discreta</a></li>
             <li><a href="#ej-continua">Cuantitativa Continua</a></li>
@@ -926,106 +924,8 @@ section:nth-child(5) { animation-delay: 0.45s; }
 
 <div class="container">
 
-    <section id="teoria">
-        <h2>1. Clasificación de Variables</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Cualitativas (Categóricas)</h3>
-                <p>Representan características o cualidades que no pueden medirse con números, sino clasificarse en categorías.</p>
-                <small>Ejemplo: Colores, Marcas, Estado Civil.</small>
-            </div>
-            <div class="card">
-                <h3>Cuantitativas Discretas</h3>
-                <p>Resultan de un proceso de <strong>conteo</strong>. Toman valores enteros y finitos. No hay valores intermedios.</p>
-                <small>Ejemplo: Número de hijos, Número de refrescos.</small>
-            </div>
-            <div class="card">
-                <h3>Cuantitativas Continuas</h3>
-                <p>Resultan de un proceso de <strong>medición</strong>. Pueden tomar cualquier valor dentro de un intervalo (incluyendo decimales).</p>
-                <small>Ejemplo: Altura, Peso, Litros de líquido.</small>
-            </div>
-        </div>
-    </section>
-
-    <section id="metodologia">
-        <h2>2. Construcción de Distribuciones</h2>
-        
-        <h3>A. Datos No Agrupados (Discretos / Cualitativos)</h3>
-        <p>Se utiliza cuando la cantidad de valores distintos es pequeña.</p>
-        <ol>
-            <li>Ordenar los datos.</li>
-            <li>Contar la frecuencia absoluta (<strong>f<sub>a</sub></strong>).</li>
-            <li>Calcular la frecuencia relativa (<strong>f<sub>r</sub></strong>) dividiendo f<sub>a</sub> entre el total (n) y multiplicando por 100.</li>
-        </ol>
-
-        <h3>B. Datos Agrupados (Continuos)</h3>
-        <p>Proceso basado en las diapositivas proporcionadas:</p>
-        <ul class="step-list">
-            <li><strong>Ordenar:</strong> Datos de menor a mayor.</li>
-            <li><strong>Rango:</strong> Valor Máximo - Valor Mínimo.</li>
-            <li><strong>Número de clases (K):</strong> Regla de Sturges: <div class="formula">K = 1 + 3.3 * log(n)</div></li>
-            <li><strong>Ancho de clase (A):</strong> <div class="formula">A = Rango / K</div></li>
-            <li><strong>Límites:</strong> Definir límite inferior y superior para cada clase.</li>
-            <li><strong>Marca de Clase (x<sub>i</sub>):</strong> Promedio entre límite inferior y superior.</li>
-            <li><strong>Frecuencias:</strong> Calcular f<sub>a</sub> y f<sub>r</sub>.</li>
-        </ul>
-
-
-    </section>
-
-    <section id="ej-cualitativa">
-    <h2>Ejemplo 1: Variable Cualitativa</h2>
-    <p><strong>Contexto:</strong> Se encuestó a 100 personas sobre su sistema operativo móvil preferido.</p>
-
-    <h3>Datos Brutos (n=100)</h3>
-    <div class="data-box">
-        Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS.
-    </div>
-
-    <h3>Tabla de Frecuencias</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Categoría</th>
-                <th>Frecuencia Absoluta (f<sub>a</sub>)</th>
-                <th>Frecuencia Relativa (f<sub>r</sub> %)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Android</td><td>26</td><td>26.00%</td></tr>
-            <tr><td>HarmonyOS</td><td>30</td><td>30.00%</td></tr>
-            <tr><td>Otro</td><td>27</td><td>27.00%</td></tr>
-            <tr><td>iOS</td><td>17</td><td>17.00%</td></tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td><strong>Total</strong></td>
-                <td><strong>100</strong></td>
-                <td><strong>100%</strong></td>
-            </tr>
-        </tfoot>
-    </table>
-
-    <div class="contenedor-interpretacion" style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-top: 20px;">
-        <h3 style="color: #f0f6fc; margin-top: 0;">Interpretación:</h3>
-        <p style="color: #c9d1d9;">
-            En este grupo de 100 personas, <strong>HarmonyOS</strong> es el sistema operativo preferido con un <strong>30%</strong> de menciones. Le siguen muy de cerca la categoría <strong>"Otro" (27%)</strong> y <strong>Android (26%)</strong>. Por el contrario, <strong>iOS</strong> es la opción menos frecuente con el <strong>17%</strong>.
-        </p>
-    </div>
-    <h3>Gráficas: Distribución del sistema operativo</h3>
-<div class="contenedor-graficas">
-    <img src="Gráficas/Barrascualitativa1.png" alt="Barras Ejemplo 1">
-    <img src="Gráficas/Pie_trans1.png" alt="Pastel Ejemplo 1">
-    <img src="Gráficas/BarrasH1_trans.png" alt="Barras V Ejemplo 1">
-    <img src="Gráficas/Poligono_FR1_trans (1).png" alt="Barras V Ejemplo 1">
-    <img src="Gráficas/Ojiva_FA1_trans.png" alt="Barras V Ejemplo 1">
-
-
-  </div>
-</section>
-
     <section id="ej-discreta">
-    <h2>Ejemplo 2: Variable Cuantitativa Discreta (no agrupada)</h2>
+    <h2>Ejemplo 1: Variable Cuantitativa Discreta (no agrupada)</h2>
     <p><strong>Contexto:</strong> Número de dispositivos electrónicos por hogar en 100 familias.</p>
 
     <h3>Datos Brutos (n=100)</h3>
@@ -1061,27 +961,19 @@ section:nth-child(5) { animation-delay: 0.45s; }
             </tr>
         </tfoot>
     </table>
-
-    <div class="contenedor-interpretacion" style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-top: 20px;">
-        <h3 style="color: #f0f6fc; margin-top: 0;">Interpretación:</h3>
-        <p style="color: #c9d1d9;">
-            El análisis muestra que el <strong>19%</strong> de las familias posee 2 dispositivos, siendo la frecuencia más alta. Además, el <strong>60%</strong> de los hogares tiene entre 3 y 6 dispositivos, indicando una alta tendencia tecnológica.
-        </p>
-         </div>
     <h3>Gráficas: Distribución del número de dispositivos</h3>
 <div class="contenedor-graficas">
-    <img src="Gráficas/Barras_Frecuencia_Relativa_trans (1).png" alt="Barras Ejemplo 1">
-    <img src="Gráficas/Pastel_Frecuencia_Relativa_trans.png" alt="Barras V Ejemplo 1">
-    <img src="Gráficas/Barras_Dispositivos2_trans.png" alt="Barras V Ejemplo 1">
-    <img src="Gráficas/Poligono_Frecuencia_Relativa2_trans.png" alt="Pastel Ejemplo 1">
-    <img src="Gráficas/Ojiva_Frecuencia_Acumulada2_trans.png" alt="Barras V Ejemplo 1">
+    <img src="imagenes/Histograma (relativa)Ej1.png" alt="Histrograma Ejemplo 1">
+    <img src="imagenes/PoligonodeFrecuencias(relativa)Ej1.png" alt="Poligono Ejemplo 1">
+    <img src="imagenes/Graficodebarras(absoluta)Ej1.png" alt="BarrasV Ejemplo 1">
+    <img src="imagenes/Ojiva(acumulada)Ej1.png" alt="Ojiva Ejemplo 1">
+    <img src="imagenes/Pie(relativa)Ej1.png" alt="Pastel V Ejemplo 1">
 
    
   </div>
     </section>
-
     <section id="ej-continua">
-        <h2>Ejemplo 3: Variable Cuantitativa Continua (agrupada)</h2>
+        <h2>Ejemplo 2: Variable Cuantitativa Continua (agrupada)</h2>
         <p><strong>Contexto:</strong> Consumo de agua diario (en litros) de 100 atletas (Datos generados entre 1.5L y 4.5L).</p>
         
         <h3>Datos Brutos (n=100)</h3>
@@ -1097,59 +989,170 @@ section:nth-child(5) { animation-delay: 0.45s; }
              4.05, 4.10, 4.15, 4.18, 4.20, 4.25, 4.30, 4.35, 4.40, 4.45, 
              4.50, 1.68, 2.08, 2.40, 2.45, 2.75, 2.80, 3.15, 3.50, 3.80
 </div>
-      <h3>Cálculos Previos (Algoritmo)</h3>
-    <div class="data-box" style="line-height: 1.8;">
-        <strong>1. n (Total):</strong> 100 <br>
-        <strong>2. Rango (R):</strong> Dato Mayor - Dato Menor = 4.5 - 1.5 = <strong>3.0</strong> <br>
-        <strong>3. No. Clases (K):</strong> 1 + 3.322 * log(100) = 7.64 ≈ <strong>8 Clases</strong> <br>
-        <strong>4. Ancho de Clase (A):</strong> R / K = 3.0 / 8 = <strong>0.375</strong>
-    </div>
-
+      
     <h3>Tabla de Frecuencias Agrupada</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Clase</th>
-                <th>Intervalo (L)</th>
-                <th>Marca de Clase (x<sub>i</sub>)</th>
-                <th>Frecuencia Absoluta (f<sub>a</sub>)</th>
-                <th>Frecuencia Relativa (f<sub>r</sub> %)</th>
-                <th>Frecuencia Acumulada (F)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>1</td><td>[1.500 - 1.875)</td><td>1.688</td><td>12</td><td>12.0%</td><td>12</td></tr>
-            <tr><td>2</td><td>[1.875 - 2.250)</td><td>2.063</td><td>13</td><td>13.0%</td><td>25</td></tr>
-            <tr><td>3</td><td>[2.250 - 2.625)</td><td>2.438</td><td>15</td><td>15.0%</td><td>40</td></tr>
-            <tr><td>4</td><td>[2.625 - 3.000)</td><td>2.813</td><td>14</td><td>14.0%</td><td>54</td></tr>
-            <tr><td>5</td><td>[3.000 - 3.375)</td><td>3.188</td><td>11</td><td>11.0%</td><td>65</td></tr>
-            <tr><td>6</td><td>[3.375 - 3.750)</td><td>3.563</td><td>12</td><td>12.0%</td><td>77</td></tr>
-            <tr><td>7</td><td>[3.750 - 4.125)</td><td>3.938</td><td>13</td><td>13.0%</td><td>90</td></tr>
-            <tr><td>8</td><td>[4.125 - 4.500]</td><td>4.313</td><td>10</td><td>10.0%</td><td>100</td></tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3"><strong>Total</strong></td>
-                <td><strong>100</strong></td>
-                <td><strong>100%</strong></td>
-                <td>-</td>
-            </tr>
-        </tfoot>
-    </table>
-
-    <div class="contenedor-interpretacion" style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-top: 20px;">
-        <h3 style="color: #f0f6fc; margin-top: 0;">Interpretación:</h3>
-        <p style="color: #c9d1d9;">
-            El análisis del consumo de agua muestra una distribución bastante uniforme. El intervalo con mayor frecuencia es de <strong>2.250 a 2.625 litros</strong>, donde se ubica el <strong>15%</strong> de los atletas. Además, se observa que el <strong>54%</strong> de los deportistas consume menos de 3 litros diarios, mientras que un significativo <strong>23%</strong> mantiene una hidratación alta, superando los 3.75 litros por día.
-        </p>
-         </div>
+<table class="tabla-agrupada">
+    <thead>
+        <tr>
+            <th>Clase</th>
+            <th>Límite Inferior</th>
+            <th>Límite Superior</th>
+            <th>Marca de Clase (X<sub>i</sub>)</th>
+            <th>Frecuencia Absoluta (F<sub>A</sub>)</th>
+            <th>Frecuencia Relativa (F<sub>R</sub> %)</th>
+            <th>Frecuencia Acumulada (F<sub>i</sub>)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1.500</td>
+            <td>1.875</td>
+            <td>1.688</td>
+            <td>12</td>
+            <td>12.0%</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1.875</td>
+            <td>2.250</td>
+            <td>2.063</td>
+            <td>13</td>
+            <td>13.0%</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2.250</td>
+            <td>2.625</td>
+            <td>2.438</td>
+            <td>15</td>
+            <td>15.0%</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2.625</td>
+            <td>3.000</td>
+            <td>2.813</td>
+            <td>14</td>
+            <td>14.0%</td>
+            <td>54</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>3.000</td>
+            <td>3.375</td>
+            <td>3.188</td>
+            <td>11</td>
+            <td>11.0%</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>3.375</td>
+            <td>3.750</td>
+            <td>3.563</td>
+            <td>12</td>
+            <td>12.0%</td>
+            <td>77</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>3.750</td>
+            <td>4.125</td>
+            <td>3.938</td>
+            <td>13</td>
+            <td>13.0%</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>4.125</td>
+            <td>4.500</td>
+            <td>4.313</td>
+            <td>10</td>
+            <td>10.0%</td>
+            <td>100</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">Total</td>
+            <td>100</td>
+            <td>100%</td>
+            <td>-</td>
+        </tr>
+    </tfoot>
+</table>
     <h3>Gráficas: Distribución del número de consumo de agua diario </h3>
 <div class="contenedor-graficas">
-    <img src="Gráficas/Histograma_FR_trans.png" alt="Barras Ejemplo 1">
-    <img src="Gráficas/Pie_Clases3_trans.png" alt="Barras Ejemplo 1">
-    <img src="Gráficas/barras hor.3.png" alt="Barras V Ejemplo 1">
-    <img src="Gráficas/Poligono_FR3.png" alt="Pastel Ejemplo 1">
-    <img src="Gráficas/ojiva f3.png" alt="Barras V Ejemplo 1">
+    <img src="imagenes/Histograma(relativa)Ej2.png" alt="Histrograma Ejemplo 1">
+    <img src="imagenes/Poligonodefrecuencias(relativa)Ej2.png" alt="Poligono Ejemplo 1">
+    <img src="imagenes/Graficodebarras(absoluta)Ej2.png" alt="BarrasV Ejemplo 1">
+    <img src="imagenes/Ojiva(acumulada)Ej2.png" alt="Ojiva Ejemplo 1">
+    <img src="imagenes/Pie(relativa)Ej2.png" alt="Pastel V Ejemplo 1">
+
+    </div>
+</section>
+<section id="ej-cualitativa">
+    <h2>Ejemplo 3: Variable Cualitativa</h2>
+    <p><strong>Contexto:</strong> Se encuestó a 100 personas sobre su sistema operativo móvil preferido.</p>
+
+    <h3>Datos Brutos (n=100)</h3>
+    <div class="data-box">
+        Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, Android, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, HarmonyOS, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, Otro, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS, iOS.
+    </div>
+
+   <h3>Tabla de Frecuencias</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Clase</th>
+            <th>Frecuencia Absoluta (f<sub>a</sub>)</th>
+            <th>Frecuencia Relativa (f<sub>r</sub> %)</th>
+            <th>Frecuencia Acumulada (F<sub>i</sub>)</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Android</td>
+            <td>26</td>
+            <td>26.00%</td> <td>26</td>
+        </tr>
+        <tr>
+            <td>HarmonyOS</td>
+            <td>30</td>
+            <td>30.00%</td> <td>56</td>
+        </tr>
+        <tr>
+            <td>Otro</td>
+            <td>27</td>
+            <td>27.00%</td> <td>83</td>
+        </tr>
+        <tr>
+            <td>iOS</td>
+            <td>17</td>
+            <td>17.00%</td> <td>100</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>100</strong></td>
+            <td><strong>100%</strong></td> <td><strong>-</strong></td>
+        </tr>
+    </tfoot>
+</table>
+    <h3>Gráficas: Distribución del sistema operativo</h3>
+<div class="contenedor-graficas">
+    <img src="imagenes/Histograma (relativa)Ej3.png" alt="Histrograma Ejemplo 1">
+    <img src="imagenes/Poligonodefrecuencias(relativa)Ej3.png" alt="Poligono Ejemplo 1">
+    <img src="imagenes/Graficodebarras(absoluta)Ej3.png" alt="BarrasV Ejemplo 1">
+    <img src="imagenes/Ojiva(acumulada)Ej3.png" alt="Ojiva Ejemplo 1">
+    <img src="imagenes/Pie(relativa)Ej3.png" alt="Pastel V Ejemplo 1">
 
     </div>
 </section>
