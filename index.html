@@ -552,7 +552,6 @@ th {
     padding: 14px 16px;
     text-align: center;
     font-weight: 600;
-    text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     border-bottom: 1px solid var(--border);
@@ -937,10 +936,10 @@ section:nth-child(5) { animation-delay: 0.45s; }
     <table>
         <thead>
             <tr>
-                <th>No. Dispositivos</th>
-                <th>Frecuencia Absoluta (f<sub>a</sub>)</th>
-                <th>Frecuencia Relativa (f<sub>r</sub> %)</th>
-                <th>Frecuencia Acumulada (F)</th>
+                <th>clase</th>
+                <th>frecuencia absoluta </th>
+                <th>frecuencia relativa </th>
+                <th>frecuencia acumulada </th>
             </tr>
         </thead>
         <tbody>
@@ -967,7 +966,7 @@ section:nth-child(5) { animation-delay: 0.45s; }
     <img src="imagenes/PoligonodeFrecuencias(relativa)Ej1.png" alt="Poligono Ejemplo 1">
     <img src="imagenes/Graficodebarras(absoluta)Ej1.png" alt="BarrasV Ejemplo 1">
     <img src="imagenes/Ojiva(acumulada)Ej1.png" alt="Ojiva Ejemplo 1">
-    <img src="imagenes/Pie(relativa)Ej1.png" alt="Pastel V Ejemplo 1">
+    <img src="imagenes/PieEj1.png" alt="Pastel V Ejemplo 1">
 
    
   </div>
@@ -994,13 +993,13 @@ section:nth-child(5) { animation-delay: 0.45s; }
 <table class="tabla-agrupada">
     <thead>
         <tr>
-            <th>Clase</th>
-            <th>Límite Inferior</th>
-            <th>Límite Superior</th>
-            <th>Marca de Clase (X<sub>i</sub>)</th>
-            <th>Frecuencia Absoluta (F<sub>A</sub>)</th>
-            <th>Frecuencia Relativa (F<sub>R</sub> %)</th>
-            <th>Frecuencia Acumulada (F<sub>i</sub>)</th>
+            <th>clase</th>
+            <th>límite inferior</th>
+            <th>límite superior</th>
+            <th>marca de clase </th>
+            <th>frecuencia absoluta </th>
+            <th>frecuencia relativa </th>
+            <th>frecuencia acumulada </th>
         </tr>
     </thead>
     <tbody>
@@ -1109,10 +1108,10 @@ section:nth-child(5) { animation-delay: 0.45s; }
 <table>
     <thead>
         <tr>
-            <th>Clase</th>
-            <th>Frecuencia Absoluta (f<sub>a</sub>)</th>
-            <th>Frecuencia Relativa (f<sub>r</sub> %)</th>
-            <th>Frecuencia Acumulada (F<sub>i</sub>)</th>
+            <th>clase</th>
+            <th>frecuencia absoluta </th>
+            <th>frecuencia relativa </th>
+            <th>frecuencia acumulada </th>
 
         </tr>
     </thead>
@@ -1167,14 +1166,12 @@ section:nth-child(5) { animation-delay: 0.45s; }
     // --- 1. GENERACIÓN Y PROCESAMIENTO CUALITATIVO ---
     const qualOptions = ["Android", "iOS", "HarmonyOS", "Otro"];
     let qualData = [];
-    // Generar 100 datos
     for(let i=0; i<100; i++) {
         qualData.push(qualOptions[Math.floor(Math.random() * qualOptions.length)]);
     }
     qualData.sort();
     document.getElementById('qualitative-data').innerText = qualData.join(', ');
 
-    // Crear Tabla de Frecuencias
     let qualFreq = {};
     qualData.forEach(item => {
         qualFreq[item] = (qualFreq[item] || 0) + 1;
